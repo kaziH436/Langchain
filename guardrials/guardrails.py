@@ -8,6 +8,7 @@ load_dotenv()
 llm = ChatGroq(model="qwen/qwen3-32b", temperature=0)
 # llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
 
+# ensuring the way a user prompts the agent doesn't cause the agent to assist in anything its not suppose to
 @tool
 def get_customer_info_tool(customer_name: str) -> str:
     """
